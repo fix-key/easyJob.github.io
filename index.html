@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>easyJob</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- 页眉 -->
+    <header>
+        <div class="hdcontent w">
+            <div class="header_left">
+                <img src="img/index/logo.png" alt="">
+                <ul class="header_list" style="display: block;">
+                    <li>
+                        <a>首页</a>
+                    </li>
+                    <li>
+                        <a>找工作</a>
+                    </li>
+                    <li>
+                        <a>校园招聘</a>
+                    </li>
+                </ul>
+
+                <ul class="header_list" style="display:none;">
+                    <li><a style='border-bottom:1px solid #ffffff;color: #FFFFFF !important;'>首页</a></li>
+                    <li><a>我的易工作</a></li>
+                    <li><a>找工作</a></li>
+                    <li><a>我的投递</a></li>
+                    <li><a>我的收藏</a></li>
+                    <li><a>个人简历</a></li>
+                    <li><a>校园招聘</a></li>
+                </ul>
+
+                <ul class="header_list" style="display:none;">
+                    <li><a style='border-bottom:1px solid #ffffff;color: #FFFFFF !important;'>首页</a></li>
+                    <li><a>企业中心</a></li>
+                    <li><a>发布职位</a></li>
+                    <li><a>搜索简历</a></li>
+                    <li><a>职位管理</a></li>
+                    <li><a>简历管理</a></li>
+                    <li><a>企业信息</a></li>
+                    <li><a>校园招聘</a></li>
+                </ul>
+            </div>
+            <div class="header_right">
+                <ul class='header_login' style="display: block;">
+                    <li>
+                        <a href="./file/register.html" class="hdon">注册</a>
+                        <a id='login'>登录</a>
+                    </li>
+                </ul>
+
+                <ul id="header_gr_xx" class="header_logined" style="display: none;">
+                    <li>
+                        <p class="username">
+                            用户名：
+                            <span id="user">zhangshikai</span>
+                        </p>
+                        <p class="exit">
+                            <a>账号设置</a>
+                            &nbsp; / &nbsp;
+                            <a>退出登录</a>
+                        </p>
+                    </li>
+                    <li id="header_gr_tx">
+                        <p class="user_photo">
+                            <img src="./img/index/header.jpg" alt="用户头像">
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </header>
+
+    <!-- 主体 -->
+    <main>
+        <div class="banner">
+            <div class="banner_box w">
+                <!-- 登录注册 -->
+                <div class="cover">
+                    <!-- 用户未登录 -->
+                    <div class="login_before" style="display: block;">
+                        <div class="lg_title">
+                            <p class="lg_tilte_per clicked">个人用户</p>
+                            <p class="lg_tilte_com">企业用户</p>
+                        </div>
+                        <!-- 个人 -->
+                        <div class="lg_main" style="display: block;">
+                            <p>一大波offer正在袭来你还在等什么？</p>
+                            <input id="userName_p" type="text" placeholder="输入手机号码/邮箱">
+                            <input id="userPwd_p" type="password" placeholder="输入密码">
+
+                            <div class="remark">
+                                <a href="" class="forgotpwd">忘记密码？</a>
+                            </div>
+
+                            <div class="lgbtn">
+                                <a class="lgsubmit">登 录</a>
+                                <p>还没有账号？<a href="./file/register.html" style="color: #ff9c00;">立即注册</a></p>
+                            </div>
+                        </div>
+                        <!-- 企业 -->
+                        <div class="lg_main" style="display: none;">
+                            <p style="text-align:center;">寻找千里马</p>
+                            <input id="userName_p" type="text" placeholder="输入用户名">
+                            <input id="userPwd_p" type="password" placeholder="请输入密码">
+                            <div class="cm-code">
+                                <input type="text" placeholder="输入验证码" id="codeImg">
+                                <span class="reg_yzm_num" id="number">
+                                    <img src="img/index/number_img.jpg" width="80" height="30" alt="">
+                                </span>
+                                <span class="refresh">
+                                    <img src="img/index/refresh.png" alt="">
+                                </span>
+                            </div>
+                            <div class="lgbtn" style="margin-top:10px">
+                                <a class="lgsubmit">登录</a>
+                                <p style="float:left!important;">
+                                    还没有账号？
+                                    <a href="./file/register.html" style="color: #ff9c00;">立即注册</a>
+                                </p>
+                                <a href="" class="rrem" style="padding-top: 10px;">忘记密码？</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--用户已登录-->
+                    <div id="login_after" class="indexlogin" style="display: none;">
+                        <div class="user_pic">
+                            <i>
+                                <img src="./img/index/xiaobai.png" alt="">
+                            </i>
+                            <p id="login_after_user">zhangshikai</p>
+                        </div>
+                        <div class="usercenter">
+                            <a href="javascript:;">
+                                <span class="ucr1"></span>
+                                <label>职业测评</label>
+                            </a>
+                            <a href="javascript:;">
+                                <span class="ucr2"></span>
+                                <label>我的简历</label>
+                            </a>
+                            <a href="javascript:;">
+                                <span class="ucr3"></span>
+                                <label>我的投递</label>
+                            </a>
+                            <a href="javascript:;">
+                                <span class="ucr4"></span>
+                                <label>账号设置</label>
+                            </a>
+                        </div>
+                        <button id="back" class="indexlogin_after_button">退出登录</button>
+
+                    </div>
+                </div>
+
+                <!-- banner图片 -->
+                <div class="banner_list">
+                    <ul>
+                        <li>
+                            <a><img src="img/index/banner.png" alt="" width="100%" height="100%"></a>
+                        </li>
+                        <li>
+                            <a><img src="img/index/banner1.png" alt="" width="100%" height="100%"></a>
+                        </li>
+                        <li>
+                            <a><img src="img/index/banner2.png" alt="" width="100%" height="100%"></a>
+                        </li>
+                    </ul>
+
+                    <!--轮播左右键-->
+                    <div class="button_left" id="btnL">
+                        <img src="img/index/banner_btnL.png" alt="">
+                    </div>
+                    <div class="button_right" id="btnR">
+                        <img src="img/index/banner_btnR.png" alt="">
+                    </div>
+
+                    <!-- 小圆点 -->
+                    <div class="banner_index">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="content w">
+            <div class="post_box">
+                <div class="post_Statistics">
+                    <a>在线职位统计</a>
+                    <hr style="height:1px;border:none;border-top:1px dashed #888888;margin-top:15px;" />
+                    <ul class="num_statistics">
+                        <li><img src="img/index/0.png" alt="" style="position: absolute; top: 0; left: 0;"><img
+                                src="img/index/1.png" alt="" style="position: absolute; top: 61px; left: 0;"></li>
+                        <li><img src="img/index/3.png" alt="" style="position: absolute; top: 0; left: 0;"><img
+                                src="img/index/4.png" alt="" style="position: absolute; top: 61px; left: 0;"></li>
+
+                        <li><img src="img/index/5.png" alt="" style="position: absolute; top: 0; left: 0;"><img
+                                src="img/index/6.png" alt="" style="position: absolute; top: 61px; left: 0;"></li>
+                        <li><img src="img/index/7.png" alt="" style="position: absolute; top: 0; left: 0;"><img
+                                src="img/index/8.png" alt="" style="position: absolute; top: 61px; left: 0;"></li>
+
+                        <li><img src="img/index/9.png" alt="" style="position: absolute; top: 0; left: 0;"><img
+                                src="img/index/0.png" alt="" style="position: absolute; top: 61px; left: 0;"></li>
+                        <li><img src="img/index/1.png" alt="" style="position: absolute; top: 0; left: 0;"><img
+                                src="img/index/2.png" alt="" style="position: absolute; top: 61px; left: 0;"></li>
+                    </ul>
+                    <a style="font-size:16px;margin-left:8px;top:25px;">个</a>
+                </div>
+                <div class="post_Search">
+                    <div class="post_Search_box">
+                        <div class="post_Search_box_img"></div>
+                        <input id="search_word" type="text" placeholder="输入职位或公司名称">
+                        <div id="" class="post_Search_box_btn">搜索</div>
+                    </div>
+                    <div class="post_Search_hot">
+                        <span>热门搜索：</span>
+                        <a>Android</a>
+                        <a>Web前端开发</a>
+                        <a>网页美工</a>
+                        <a>Java开发工程师</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--职位列表-->
+            <div class="job_type_icon">
+                <ul>
+                    <li>
+                        <a href="javascript:;"
+                            style="background: url(img/index/job_type.png) no-repeat;background-position:-60px 0px;"></a>
+                        <div class="job_type_icon_tab"
+                            style="background: url('./img/index/job_type.png') no-repeat; background-position: -115px -15px;">
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"
+                            style="background: url(img/index/job_type.png) no-repeat;background-position:0px -332px"></a>
+                        <div class="job_type_icon_tab"
+                            style="background: url('./img/index/job_type.png') no-repeat; background-position: -115px -346px;">
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"
+                            style="background: url(img/index/job_type.png) no-repeat;background-position:0px -165px"></a>
+                        <div class="job_type_icon_tab"
+                            style="background: url('./img/index/job_type.png') no-repeat; background-position: -115px -180px;">
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"
+                            style="background: url(img/index/job_type.png) no-repeat;background-position:0px -55px"></a>
+                        <div class="job_type_icon_tab"
+                            style="background: url('./img/index/job_type.png') no-repeat; background-position: -115px -70px;">
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"
+                            style="background: url(img/index/job_type.png) no-repeat;background-position:0px -276px"></a>
+                        <div class="job_type_icon_tab"
+                            style="background: url('./img/index/job_type.png') no-repeat; background-position: -115px -291px;">
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:;"
+                            style="background: url(img/index/job_type.png) no-repeat;background-position:0px -608px"></a>
+                        <div class="job_type_icon_tab"
+                            style="background: url('./img/index/job_type.png') no-repeat; background-position: -115px -621px;">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 互联网·游戏·软件 -->
+            <div class="job_type_box">
+                <!--岗位简介-->
+                <div class="job_type_info" style="background: url(img/index/job_type1.jpg);">
+                    <div class="job_type_text">
+                        <div class="job_info_title">
+                            <a href="#">互联网·游戏·软件</a>
+                        </div>
+                        <div class="text_box">
+                            <span>互联网/移动互联网/电子商务</span>
+                            <span>网络游戏</span>
+                            <span>计算机软件</span>
+                            <span>IT服务/系统集成</span>
+                        </div>
+                    </div>
+                </div>
+                <!--岗位列表-->
+                <div class="job_type_info_list">
+                    <ul>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 电子·通信·硬件 -->
+            <div class="job_type_box">
+                <!--岗位简介-->
+                <div class="job_type_info" style="background: url(img/index/job_type2.jpg);">
+                    <div class="job_type_text">
+                        <div class="job_info_title">
+                            <a href="#">电子·通信·硬件</a>
+                        </div>
+                        <div class="text_box">
+                            <span>互联网/移动互联网/电子商务</span>
+                            <span>网络游戏</span>
+                            <span>计算机软件</span>
+                            <span>IT服务/系统集成</span>
+                        </div>
+                    </div>
+                </div>
+                <!--岗位列表-->
+                <div class="job_type_info_list">
+                    <ul>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img2.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img2.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img2.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img2.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img2.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img2.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 房地产·建筑·物业 -->
+            <div class="job_type_box">
+                <!--岗位简介-->
+                <div class="job_type_info" style="background: url(img/index/job_type3.jpg);">
+                    <div class="job_type_text">
+                        <div class="job_info_title">
+                            <a href="#">房地产·建筑·物业</a>
+                        </div>
+                        <div class="text_box">
+                            <span>互联网/移动互联网/电子商务</span>
+                            <span>网络游戏</span>
+                            <span>计算机软件</span>
+                            <span>IT服务/系统集成</span>
+                        </div>
+                    </div>
+                </div>
+                <!--岗位列表-->
+                <div class="job_type_info_list">
+                    <ul>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img3.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img3.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img3.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img3.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img3.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img3.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 金融 -->
+            <div class="job_type_box">
+                <!--岗位简介-->
+                <div class="job_type_info" style="background: url(img/index/job_type4.jpg);">
+                    <div class="job_type_text">
+                        <div class="job_info_title">
+                            <a href="#">金融</a>
+                        </div>
+                        <div class="text_box">
+                            <span>互联网/移动互联网/电子商务</span>
+                            <span>网络游戏</span>
+                            <span>计算机软件</span>
+                            <span>IT服务/系统集成</span>
+                        </div>
+                    </div>
+                </div>
+                <!--岗位列表-->
+                <div class="job_type_info_list">
+                    <ul>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img4.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img4.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img4.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img4.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img4.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img4.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 消费品 -->
+            <div class="job_type_box">
+                <!--岗位简介-->
+                <div class="job_type_info" style="background: url(img/index/job_type5.jpg);">
+                    <div class="job_type_text">
+                        <div class="job_info_title">
+                            <a href="#">消费品</a>
+                        </div>
+                        <div class="text_box">
+                            <span>互联网/移动互联网/电子商务</span>
+                            <span>网络游戏</span>
+                            <span>计算机软件</span>
+                            <span>IT服务/系统集成</span>
+                        </div>
+                    </div>
+                </div>
+                <!--岗位列表-->
+                <div class="job_type_info_list">
+                    <ul>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img5.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img5.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img5.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img5.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img5.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img5.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 汽车·机械·制造 -->
+            <div class="job_type_box">
+                <!--岗位简介-->
+                <div class="job_type_info" style="background: url(img/index/job_type6.jpg);">
+                    <div class="job_type_text">
+                        <div class="job_info_title">
+                            <a href="#">汽车·机械·制造</a>
+                        </div>
+                        <div class="text_box">
+                            <span>互联网/移动互联网/电子商务</span>
+                            <span>网络游戏</span>
+                            <span>计算机软件</span>
+                            <span>IT服务/系统集成</span>
+                        </div>
+                    </div>
+                </div>
+                <!--岗位列表-->
+                <div class="job_type_info_list">
+                    <ul>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img6.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img6.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img6.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img6.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img6.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="job_type_info_box">
+                                <img src="img/index/company_img6.png" alt="">
+                                <div class="job_list_text">
+                                    <a href="#">资金专员</a>
+                                    <a href="#">神州数码信息服务股份有限公司</a>
+                                    <a href="#">面议</a>
+                                    <a href="#">北京市市辖区东城区</a>
+                                    <img src="img/index/location.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="other_href">
+            <div class="other_href_title">
+                <a>友情链接</a>
+                <div class="other_href_title_hr"></div>
+                <div id="collected">收起∧</div>
+            </div>
+            <ul class="other_href_content">
+                <li><a>深圳青年人才</a></li>
+                <li><a>深圳市青年创业促进会</a></li>
+                <li><a>深圳人才网</a></li>
+                <li><a>深圳百姓网</a></li>
+                <li><a>深圳社保局官网</a></li>
+                <li><a>仁和会计</a></li>
+                <li><a>托福考试</a></li>
+                <li><a>塔城教育培训网</a></li>
+                <li><a>深圳拓展训练</a></li>
+                <li><a>师大家教网</a></li>
+                <li><a>青岛大学自考本科</a></li>
+            </ul>
+        </div>
+
+        <div class="footer_box">
+            <div class="footer_box_info">
+                <img src="img/index/ft_01.png" alt="">
+            </div>
+            <div class="footer_box_info">
+                <div class="footer_box_info_title">
+                    <img src="img/index/us.png" alt="">
+                    <a>关于我们</a>
+                </div>
+                <span>关于易工作网</span>
+                <span>公益声明</span>
+                <span>用户协议</span>
+                <span>媒体报道</span>
+            </div>
+            <div class="footer_box_info">
+                <div class="footer_box_info_title">
+                    <img src="img/index/fuwu.png" alt="">
+                    <a>产品服务</a>
+                </div>
+                <span>线上求职招聘</span>
+                <span>人才地图</span>
+                <span>精准招聘</span>
+                <span>线下校园招聘</span>
+            </div>
+            <div class="footer_box_info">
+                <div class="footer_box_info_title">
+                    <img src="img/index/us2.png" alt="">
+                    <a>联系我们</a>
+                </div>
+                <span>联系电话</span>
+                <span>帮助中心</span>
+                <span>友情合作</span>
+                <span>意见反馈</span>
+            </div>
+            <div class="footer_box_info">
+                <img src="img/index/ft_02.png" alt="">
+            </div>
+        </div>
+        <div class="footer_text">
+            <p class="declare"> 声明：未经 <a>job12355.com </a>同意，不得转载本网站之所有招聘信息及作品</p>
+            <p class="copyright">©2015深圳市青年人才服务有限公司版权所有<br>粤ICP备<span>15069795号-1</span></p>
+        </div>
+    </footer>
+
+    <!-- 右侧悬浮 -->
+    <div id="float_r">
+        <ul class="float_right">
+            <li>
+                <a class="QRcode" href="javascript:;"></a>
+                <a class="QRcode1 dis-no" href="javascript:;"></a>
+            </li>
+            <li>
+                <a class="info" href="javascript:;"></a>
+                <a class="info1 dis-no" href="javascript:;"></a>
+            </li>
+            <li>
+                <a class="uptop" href="javascript:;"></a>
+                <a class="uptop1 dis-no" href="javascript:;"></a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 底部广告 -->
+    <div class="float_b">
+        <div class="float_bs">
+            <ul class="bottom_list">
+                <li>
+                    <img src="img/index/logo.png" alt="">
+                </li>
+                <li>
+                    <img src="img/index/bottom_gd_03.png" alt="">
+                </li>
+                <li>
+                    <a href="javascript:;">立刻起航</a>
+                </li>
+            </ul>
+            <div class="bottom_close">
+                <img src="img/index/bottom_close_03.png" alt="">
+            </div>
+        </div>
+        <div class="bottom_block">
+            <img src="img/index/bottom_02.png" alt="">
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

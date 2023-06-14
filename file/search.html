@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>easyJob（搜索）</title>
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="hdcontent w" id="main_content">
+            <div class="header_left">
+                <a href="../index.html" id="goback">
+                    <img src="../img/search/logo.png" alt="">
+                </a>
+                <ul class="header_list">
+                    <li>
+                        <a href="../index.html">首页</a>
+                    </li>
+                    <li>
+                        <a>找工作</a>
+                    </li>
+                    <li>
+                        <a>校园招聘</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header_right">
+                <ul class='header_login'>
+                    <li>
+                        <a href="./register.html" class="hdon">注册</a>
+                        <a id='login'>登录</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="header_list" style="display:none;">
+                <li><a href="index.html" style='border-bottom:1px solid #ffffff;color: #FFFFFF !important;'>首页</a></li>
+                <li><a>我的易工作</a></li>
+                <li><a>找工作</a></li>
+                <li><a>我的投递</a></li>
+                <li><a>我的收藏</a></li>
+                <li><a>个人简历</a></li>
+                <li><a>校园招聘</a></li>
+            </ul>
+
+            <ul class="header_list" style="display:none;">
+                <li><a href="index.html" style='border-bottom:1px solid #ffffff;color: #FFFFFF !important;'>首页</a></li>
+                <li><a>企业中心</a></li>
+                <li><a>发布职位</a></li>
+                <li><a>搜索简历</a></li>
+                <li><a>职位管理</a></li>
+                <li><a>简历管理</a></li>
+                <li><a>企业信息</a></li>
+                <li><a>校园招聘</a></li>
+            </ul>
+
+            <ul id="header_gr_xx" class="header_logined" style="display: none;">
+                <li>
+                    <p class="username">
+                        用户名：
+                        <span id="user"></span>
+                    </p>
+                    <p class="exit">
+                        <a>账号设置</a>
+                        &nbsp; / &nbsp;
+                        <a>退出登录</a>
+                    </p>
+                </li>
+                <li id="header_gr_tx">
+                    <p class="user_photo">
+                        <img id="user_photo" src="../img/search/user_photo.png" alt="用户头像">
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="search_main">
+        <div class="search_main_T">
+            <div class="search_main_T_con">
+                <div class="search_main_search">
+                    <input id="search_input" type="text" placeholder="输入职位或公司名称">
+                    <a id="search_btn" class="search_main_search_btn">搜索</a>
+                    <p>热门搜索：</p>
+                </div>
+                <ul class="search_main_search">
+                    <li>
+                        <span>选择行业</span>
+                    </li>
+                    <li>
+                        <span>选择职能</span>
+                    </li>
+                    <li style="background: url('../img/search/re_01.png')no-repeat 230px center;">
+                        <span>工作地点</span>
+                    </li>
+                    <li style="background: url('../img/search/re_01.png')no-repeat 230px center;">
+                        <span>企业性质</span>
+
+                        <ul class="drop" id="company_nature" style="display:none;">
+                            <li data-id="1">私营/民营企业</li>
+
+                            <li data-id="2">国有企业</li>
+
+                            <li data-id="3">中外合营(合资/合作)</li>
+
+                            <li data-id="4">外商独资/外企办事处</li>
+
+                            <li data-id="5">社会组织</li>
+
+                            <li data-id="6">政府机关/事业单位</li>
+
+                            <li data-id="0">其他</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="Select_box_industry" class="job_Select_box ">
+            <!--行业选择-->
+            <div class="job_window">
+                <div class="job_top">
+                    <span>选择专业</span>
+                    <i class="job_close"></i>
+                </div>
+                <div class="job_content"></div>
+                <div class="job_bottom" style="display: none;">
+                    <a class="job_over">已选择：<span></span></a>
+                    <a class="job_ok">确定</a>
+                </div>
+            </div>
+        </div>
+        <div id="Select_box_skill" class="job_Select_box ">
+            <!--职能选择-->
+            <div class="job_window">
+                <div class="job_top">
+                    <span>选择职能</span>
+                    <i class="job_close"></i>
+                </div>
+                <div class="job_content"></div>
+                <div class="job_bottom" style="display: none;">
+                    <a class="job_over">已选择：<span></span></a>
+                    <a class="job_ok">确定</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="search_main_B">
+            <div class="search_main_B_main">
+                <p>共为您找到 <span id="job_num" class="job_active">0</span> 个职位</p>
+                <div class="job_list_box">
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+        </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>

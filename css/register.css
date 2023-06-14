@@ -1,0 +1,479 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 12px/1.5 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, 黑体, Arial, sans-serif;
+    min-width: 1200px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.main_box {
+    position: absolute;
+    width: 100%;
+}
+
+.reg_main {
+    position: relative;
+    width: 950px;
+    height: 700px;
+    border-radius: 20px;
+    margin: 70px auto;
+    border: 1px solid #DDDDDD;
+    box-shadow: 0px 5px 0px #DBDBDB;
+}
+
+.reg_main .reg_main_head {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: url(../img/register/newusernav.jpg) no-repeat;
+    background-size: 100% 100%;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 120px;
+}
+
+.reg_main .reg_main_content {
+    width: 100%;
+    float: left;
+}
+
+.reg_main_content_box {
+    width: 500px;
+    height: 470px;
+    margin: 50px auto;
+}
+
+.reg_main_content_box_head {
+    width: 100%;
+    height: 40px;
+}
+
+.reg_main_content_box_main {
+    float: left;
+    width: 100%;
+}
+
+.reg_main_content_box_main p {
+    width: 100%;
+    float: left;
+    font-size: 14px;
+    color: #ff3333;
+    display: none;
+}
+
+.reg_title_box {
+    width: 50%;
+    height: 40px;
+    float: left;
+}
+
+.reg_title {
+    width: 100px;
+    height: 30px;
+    margin: 10px auto;
+}
+
+.reg_title_icon_phone {
+    float: left;
+    width: 15px;
+    height: 25px;
+    background: url(../img/register/phone.png)no-repeat;
+}
+
+.phone_on {
+    background: url(../img/register/phone_1.png)no-repeat;
+}
+
+.reg_title_icon_email {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../img/register/post.png) no-repeat;
+    margin-top: 4px;
+}
+
+.email_on {
+    background: url(../img/register/post_1.png) no-repeat !important;
+}
+
+.reg_title a {
+    font-size: 14px;
+    margin-left: 10px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.reg_title_active {
+    color: #0AA5F5;
+}
+
+.border_box_phone {
+    position: relative;
+    width: 100%;
+    height: 15px;
+    float: left;
+    border-top: 1px solid #0AA5F5;
+}
+
+.border_box_phone:before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    left: 120px;
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom-color: #0aa5f5;
+}
+
+.border_box_phone:after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    left: 120px;
+    top: -19px;
+    border: 10px solid transparent;
+    border-bottom-color: #ffffff;
+}
+
+.border_box_email {
+    width: 100%;
+    height: 15px;
+    float: left;
+    border-top: 1px solid #0AA5F5;
+    position: relative;
+}
+
+.border_box_email:before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    left: 375px;
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom-color: #0aa5f5;
+}
+
+.border_box_email:after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 0px;
+    height: 0px;
+    left: 375px;
+    top: -19px;
+    border: 10px solid transparent;
+    border-bottom-color: #ffffff;
+}
+
+.reg_main_content_box input {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    text-indent: 10px;
+}
+
+.user_photo_box {
+    width: 100%;
+    float: left;
+    padding-top: 6px;
+    padding-left: 6px;
+}
+
+.user_photo_box span.user_photo_box_title {
+    float: left;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.user_photo_box button {
+    position: relative;
+    float: left;
+    width: 94px;
+    height: 32px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #000;
+    border: 0;
+    border-radius: 8px;
+    margin-top: 29px;
+    margin-right: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
+#user_photo_file_p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 30px;
+    text-indent: 0;
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+    color: #ffffff;
+    background-color: #0AA5F5;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
+.user_photo_box button:hover #user_photo_file_p {
+    transform: translateY(-0.23em);
+}
+
+.user_photo_box button:active #user_photo_file_p{
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+  }
+
+/* #user_photo_file_p::before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: inline-block;
+    content: '';
+    width: 90px;
+    height: 30px;
+    background-color: #0AA5F5;
+    border: 1px solid #000;
+} */
+
+.user_photo_show {
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+.user_photo_show img {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50px;
+}
+
+/* 验证码 */
+.reg_yzm {
+    float: left;
+    width: 45%;
+    height: 40px;
+    margin-top: 20px;
+    border: 1px solid #DDDDDD;
+}
+
+.reg_yzm input {
+    float: left;
+    width: 94px;
+    height: 40px;
+    border: none;
+    margin-top: 0;
+    text-indent: 10px;
+}
+
+.reg_yzm_num {
+    width: 100px;
+    height: 35px;
+    line-height: 40px;
+    display: inline-block;
+    font-size: 20px;
+    color: #888888;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.reg_yzm_resh {
+    float: right;
+    width: 25px;
+    height: 25px;
+    top: 7px;
+    margin-right: 5px;
+    position: relative;
+    background: url(../img/register/resh.png)no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.reg_yzm_btn {
+    float: right;
+    width: 100px;
+    height: 40px;
+    background-color: #0AA5F5;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+/* 接受协议 */
+.accept_box {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    float: left;
+}
+
+.accept_box_icon {
+    width: 20px;
+    height: 20px;
+    float: left;
+    background: url(../img/register/box.png) no-repeat center;
+    background-size: 20px 20px;
+}
+
+.accept_box a {
+    margin-left: 5px;
+    color: #666666;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.accept_box a span {
+    color: #0AA5F5;
+}
+
+/* 注册 */
+.register_btn {
+    float: left;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #F58C0A;
+    cursor: pointer;
+}
+
+.tologin {
+    margin-top: 10px;
+    width: 120px;
+    float: right;
+    font-size: 12px;
+}
+
+.tologin a {
+    color: #0AA5F5;
+}
+
+/* 页脚 */
+footer {
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+    border-top: 1px solid #DBDBDB;
+}
+
+.declare {
+    float: left;
+    font-size: 14px;
+    color: #666;
+    padding-top: 30px;
+}
+
+.declare a {
+    font-weight: bold;
+    color: #0AA5F5;
+}
+
+.copyright {
+    float: right;
+    padding-top: 20px;
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+}
+
+.copyright span {
+    font-size: 12px;
+}
+
+/*用户协议*/
+.user_agree {
+    position: absolute;
+    width: 100%;
+    height: 974px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    display: none;
+}
+
+.user_agree .close_box {
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin: 30px;
+    background: url(../img/register/close.png)no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+/*协议内容盒子*/
+.user_agree .user_agree_box {
+    width: 600px;
+    height: 750px;
+    margin: 70px auto;
+    overflow: auto;
+    border-radius: 10px;
+    border: 5px solid #4a86f5;
+    background-color: #ffffff;
+}
+
+/*标题*/
+.user_agree_box .regist_content .regist_title {
+    margin: 20px auto;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.user_agree_box .regist_content .regist_main {
+    width: 100%;
+}
+
+/*小标题*/
+.regist_main .rm_title {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #38a2e0;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+/*协议细则*/
+.regist_main .rm_content {
+    width: 90%;
+    margin: 0 auto;
+    text-indent: 20px
+}
+
+.regist_main .rm_content p {
+    font-size: 15px;
+    margin: 20px auto;
+}
