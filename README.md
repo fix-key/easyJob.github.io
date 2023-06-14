@@ -19,9 +19,9 @@ npm i
 
 ## 启动服务器
 在 vscode 自己集成的 powershell 中输入如下命令：
-···powershell
+```powershell
 node server.js
-···
+```
 前端要先 cd 到 js目录中才能启动服务器
 
 # 项目功能
