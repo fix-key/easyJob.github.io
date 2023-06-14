@@ -1,7 +1,5 @@
-# easyJob.github.io
+# 项目介绍
 易工作是一个结合HTML，CSS和JavaScript技术的综合实训项目
-
-@[toc]
 
 # 项目前期的准备工作
 ## Node.js 环境的安装
